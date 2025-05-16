@@ -6,6 +6,13 @@ import os
 
 app = Flask(__name__)
 
+# Verifica se todas as variáveis de ambiente estão definidas
+required_env_vars = ['CONSUMER_KEY', 'CONSUMER_SECRET', 'ACCESS_TOKEN', 'ACCESS_TOKEN_SECRET']
+missing_vars = [var for var in required_env_vars if not os.environ.get(var)]
+if missing_vars:
+    raise EnvironmentError(f"Missing environment variables: {', '.join(missing_vars)}")
+
+# Carrega as credenciais do Twitter
 consumer_key = os.environ.get('ybFjGcgFbWDkoe7wfBNB19vNj')
 consumer_secret = os.environ.get('rs4iKNXTJmRJMeIZ9hXktBiuUYjcJAZusjZ1D7yhE8ax8qgvio')
 access_token = os.environ.get('1923286783917424641-ow59pxKlkeRknVkFw83RiMaDAAaCoz')
