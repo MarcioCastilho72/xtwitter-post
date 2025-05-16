@@ -6,10 +6,10 @@ import os
 
 app = Flask(__name__)
 
-consumer_key = os.environ.get('CONSUMER_KEY')
-consumer_secret = os.environ.get('CONSUMER_SECRET')
-access_token = os.environ.get('ACCESS_TOKEN')
-access_token_secret = os.environ.get('ACCESS_TOKEN_SECRET')
+consumer_key = os.environ.get('ybFjGcgFbWDkoe7wfBNB19vNj')
+consumer_secret = os.environ.get('rs4iKNXTJmRJMeIZ9hXktBiuUYjcJAZusjZ1D7yhE8ax8qgvio')
+access_token = os.environ.get('1923286783917424641-ow59pxKlkeRknVkFw83RiMaDAAaCoz')
+access_token_secret = os.environ.get('kfCcokwqOeKIOPWwvF44K8Juofn9PnzZtk9FLVSAHndTZ')
 
 auth = tweepy.OAuth1UserHandler(consumer_key, consumer_secret, access_token, access_token_secret)
 api = tweepy.API(auth)
